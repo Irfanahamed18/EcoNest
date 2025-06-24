@@ -1,0 +1,196 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #1f2d3d;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #123524; /* Darker green for better contrast */
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #d4f1f4;
+}
+
+/* Main Container */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #264653;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+}
+
+/* Layouts */
+.user-container,
+.posts,
+.albums,
+.comments-table,
+.album-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Cards */
+.user-card,
+.post-card,
+.album-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #2a9d8f;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card:hover,
+.post-card:hover,
+.album-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Content */
+.user-card img,
+.album-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.user-card h3,
+.post-card h4,
+.album-card h4 {
+  margin: 0.8rem 0 0.4rem;
+  color: #2a9d8f;
+}
+
+.user-card p,
+.post-card p,
+.album-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.user-card a,
+.post-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1a7f6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.user-card a:hover,
+.post-card a:hover {
+  text-decoration: underline;
+}
+
+/* Center profile card */
+.user-card.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Comment Table Layout */
+.comments-table {
+  width: 100%;
+  flex-direction: column;
+}
+
+.comment-row {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-left: 5px solid #2a9d8f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.comment-row div:first-child {
+  font-weight: 600;
+  color: #1f2d3d;
+  margin-bottom: 0.3rem;
+}
+
+.comment-row div:last-child {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Album Gallery */
+.album-gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #123524;
+  color: white;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-card,
+  .post-card,
+  .album-card {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    margin-top: 0.5rem;
+  }
+}
